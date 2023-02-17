@@ -13,6 +13,13 @@
 		301394FA2997815D00316A30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301394F82997815D00316A30 /* Main.storyboard */; };
 		301394FC2997816000316A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301394FB2997816000316A30 /* Assets.xcassets */; };
 		301394FF2997816000316A30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301394FD2997816000316A30 /* LaunchScreen.storyboard */; };
+		30139507299786B600316A30 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30139506299786B600316A30 /* User.swift */; };
+		30139509299786F900316A30 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30139508299786F900316A30 /* Film.swift */; };
+		3013950B2997898100316A30 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013950A2997898100316A30 /* Users.swift */; };
+		3013950D29978CEA00316A30 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013950C29978CEA00316A30 /* Films.swift */; };
+		30139512299799A400316A30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30139511299799A400316A30 /* HomeViewController.swift */; };
+		3013951429979A9E00316A30 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013951329979A9E00316A30 /* FilmTableViewCell.swift */; };
+		308E9822299915930015F8C9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E9821299915930015F8C9 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		301394FB2997816000316A30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301394FE2997816000316A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		301395002997816000316A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30139506299786B600316A30 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		30139508299786F900316A30 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		3013950A2997898100316A30 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		3013950C29978CEA00316A30 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
+		30139511299799A400316A30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3013951329979A9E00316A30 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		308E9821299915930015F8C9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,36 @@
 			children = (
 				301394F22997815D00316A30 /* AppDelegate.swift */,
 				301394F42997815D00316A30 /* SceneDelegate.swift */,
-				301394F62997815D00316A30 /* ViewController.swift */,
+				308E98232999159C0015F8C9 /* ViewControllers */,
 				301394F82997815D00316A30 /* Main.storyboard */,
 				301394FB2997816000316A30 /* Assets.xcassets */,
 				301394FD2997816000316A30 /* LaunchScreen.storyboard */,
 				301395002997816000316A30 /* Info.plist */,
+				3013951329979A9E00316A30 /* FilmTableViewCell.swift */,
+				3013950E29978DE200316A30 /* Data */,
 			);
 			path = "Mini Netflix";
+			sourceTree = "<group>";
+		};
+		3013950E29978DE200316A30 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				30139506299786B600316A30 /* User.swift */,
+				3013950A2997898100316A30 /* Users.swift */,
+				30139508299786F900316A30 /* Film.swift */,
+				3013950C29978CEA00316A30 /* Films.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		308E98232999159C0015F8C9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				301394F62997815D00316A30 /* ViewController.swift */,
+				30139511299799A400316A30 /* HomeViewController.swift */,
+				308E9821299915930015F8C9 /* DetailsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +175,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30139509299786F900316A30 /* Film.swift in Sources */,
+				30139507299786B600316A30 /* User.swift in Sources */,
 				301394F72997815D00316A30 /* ViewController.swift in Sources */,
+				30139512299799A400316A30 /* HomeViewController.swift in Sources */,
+				3013950D29978CEA00316A30 /* Films.swift in Sources */,
 				301394F32997815D00316A30 /* AppDelegate.swift in Sources */,
+				3013951429979A9E00316A30 /* FilmTableViewCell.swift in Sources */,
+				3013950B2997898100316A30 /* Users.swift in Sources */,
 				301394F52997815D00316A30 /* SceneDelegate.swift in Sources */,
+				308E9822299915930015F8C9 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,6 +339,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
