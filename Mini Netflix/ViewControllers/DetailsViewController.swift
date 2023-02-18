@@ -27,9 +27,9 @@ class DetailsViewController: UIViewController {
     
     
     
-    //@IBOutlet weak var navBar: UINavigationBar!
-    
-    @IBOutlet weak var navBtn: UINavigationItem!
+//    @IBOutlet weak var navBar: UINavigationBar!
+//
+//    @IBOutlet weak var navBtn: UINavigationItem!
     @IBOutlet weak var backBtn: UIBarButtonItem!
     
     var film : Film = Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: "")
@@ -57,34 +57,15 @@ class DetailsViewController: UIViewController {
         typeLbl.text = getType()
         producerLbl.text = film.produttore
         
-        self.navigationItem.titleView?.tintColor = .white
-       self.navigationItem.setHidesBackButton(false, animated: true)
         
         
         
-        
-        //self.navigationItem.title = "prova"
-        
-        //self.navigationController?.title = "prova"
-//        self.navigationController?.navigationBar.topItem
-        //self.title = "ciao"
+//        self.navBar.backItem?.hidesBackButton = false
+//        navBtn.leftItemsSupplementBackButton = true
+//
         
         
         
-        
-        /*
-        // Crea un bottone back
-        let backButton = UIBarButtonItem()
-        // Imposta il titolo del bottone
-        backButton.title = "Indietro"
-        // Imposta l'azione del bottone
-        backButton.action = #selector(getter: backBtn.isSelected)
-        // Assegna il bottone alla navigationItem
-        navBtn.backBarButtonItem = backButton
-         */
-        
-        //txt.text = "Descrizione/Trama"
-            
         
         
     }
@@ -109,10 +90,10 @@ class DetailsViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let homeVC = segue.destination as? HomeViewController else { return }
-        homeVC.currentUser = self.currentUser
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let homeVC = segue.destination as? HomeViewController else { return }
+//        homeVC.currentUser = self.currentUser
+//    }
     
 
     /*
@@ -126,15 +107,15 @@ class DetailsViewController: UIViewController {
     */
     
     
-    
-    
-    @IBAction func back(_ sender: UIBarButtonItem) {
+    @IBAction func goBackHome(_ sender: UIBarButtonItem) {
         
-            performSegue(withIdentifier: "goBack", sender: nil)
+        self.dismiss(animated: true)
+        
         
     }
     
     
+   
     
 
 }

@@ -36,6 +36,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         welcomeLbl.textColor = .white
         
+        self.navigationItem.setHidesBackButton(false, animated: true)
+        
+        self.navigationController?.isNavigationBarHidden = true
+        
         
         
     }
@@ -53,8 +57,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.time.text = "\(String(films[currentUser.films[indexPath.row]]?.durata ?? 0)) min"
         
-        cell.title.textColor = .white
-        cell.time.textColor = .white
+        cell.title.textColor = .black
+        cell.time.textColor = .black
         
         
         cell.backgroundColor = .black
@@ -78,10 +82,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         detailsVC?.currentUser = self.currentUser
         
-        print("row selected: ", indexPath.row)
-        print("film : \(detailsVC?.film)")
         
-        performSegue(withIdentifier: "goDetails", sender: nil)
+        
+        self.navigationController?.pushViewController(detailsVC ?? UIViewController(), animated: true)
+//        performSegue(withIdentifier: "goDetails", sender: nil)
         
     }
     

@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         view.backgroundColor = .black
+        
     }
     
     
@@ -67,17 +68,23 @@ class ViewController: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goHome" {
-            guard let homeVC = segue.destination as? HomeViewController else { return }
-            homeVC.currentUser = user
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goHome" {
+//            guard let homeVC = segue.destination as? HomeViewController else { return }
+//            homeVC.currentUser = user
+//        }
+//    }
     
     
     @IBAction func login(_ sender: UIButton) {
         if found(){
-            performSegue(withIdentifier: "goHome", sender: self)
+            let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
+            
+            homeVC.currentUser = user
+            
+            self.navigationController?.pushViewController(homeVC , animated: true)
+            
+//            performSegue(withIdentifier: "goHome", sender: self)
         }
     }
     
