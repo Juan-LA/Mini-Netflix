@@ -16,7 +16,8 @@ class FilmTableViewCell: UITableViewCell {
     
     @IBOutlet weak var time: UILabel!
     
-    
+//    //valore String per la ricerca nel dizionario
+//    var codeName = String()
     
 
     override func awakeFromNib() {

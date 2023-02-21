@@ -21,7 +21,10 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var txt: UITextView!
     
-    var currentUser : User = User(name: "", mail: "", pw: "", films: [])
+//    var currentUser : User = User(name: "", mail: "", pw: "", films: [])
+    
+    var selectedMovie = String()
+    
     
     
     
@@ -51,7 +54,7 @@ class DetailsViewController: UIViewController {
         producerLbl.textColor = .white
         
         
-        img.image = UIImage(named: film.nome)
+        img.image = UIImage(named: selectedMovie)
         titleLbl.text = film.nome
         timeLbl.text = "\(film.durata) min"
         typeLbl.text = getType()
@@ -80,7 +83,7 @@ class DetailsViewController: UIViewController {
             for i in s {
                 string += i
                 if i != s[s.count-1]{
-                    string += ","
+                    string += ", "
                 }
             }
             return string
@@ -109,7 +112,9 @@ class DetailsViewController: UIViewController {
     
     @IBAction func goBackHome(_ sender: UIBarButtonItem) {
         
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+        
+        
         
         
     }

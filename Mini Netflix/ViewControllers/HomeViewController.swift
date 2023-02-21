@@ -60,6 +60,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.title.textColor = .black
         cell.time.textColor = .black
         
+//        cell.codeName = currentUser.films[indexPath.row]
+        
         
         cell.backgroundColor = .black
         
@@ -74,57 +76,56 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.currentUser = user
     }
     
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailsVC") as? DetailsViewController
-        
-        detailsVC?.film = films[currentUser.films[indexPath.row]] ?? (Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: ""))
-        
-        detailsVC?.currentUser = self.currentUser
-        
-        
-        
-        self.navigationController?.pushViewController(detailsVC ?? UIViewController(), animated: true)
-//        performSegue(withIdentifier: "goDetails", sender: nil)
-        
-    }
-    
-    
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailsVC") as? DetailsViewController
-        
-//        detailsVC?.titleLbl.text = films[currentUser.films[indexPath.row]]?.nome
-//        detailsVC?.producerLbl.text = films[currentUser.films[indexPath.row]]?.produttore
-//        detailsVC?.timeLbl.text = "\(films[currentUser.films[indexPath.row]]?.durata ?? 0) minuti"
-//        detailsVC?.img.image = UIImage(named: currentUser.films[indexPath.row])
-        
-        let backItem = UIBarButtonItem()
-            backItem.title = "Something Else"
-            navigationItem.backBarButtonItem = backItem
-        
-        detailsVC?.navigationItem.backBarButtonItem = backItem
-        
-        
-        detailsVC?.navigationItem.title = "prova"
-        detailsVC?.navigationController?.title = "prova"
-        detailsVC?.navigationController?.navigationItem.title = "back"
-        
-        
-        
-        
-        detailsVC?.film = films[currentUser.films[indexPath.row]] ?? (Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: ""))
-        
-        
-        
-//        self.navigationController?.pushViewController(detailsVC ?? UIViewController(), animated: true)
-        
-        self.present(detailsVC ?? UIViewController(), animated: true, completion: nil)
-        
-        
-        
+            let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailsVC") as? DetailsViewController
+            
+            detailsVC?.film = films[currentUser.films[indexPath.row]] ?? (Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: ""))
+            
+        detailsVC?.selectedMovie = currentUser.films[indexPath.row]
+            
+            
+            
+            self.navigationController?.pushViewController(detailsVC ?? UIViewController(), animated: true)
+    //        performSegue(withIdentifier: "goDetails", sender: nil)
+            
     }
+    
+    
+    
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailsVC") as? DetailsViewController
+//
+////        detailsVC?.titleLbl.text = films[currentUser.films[indexPath.row]]?.nome
+////        detailsVC?.producerLbl.text = films[currentUser.films[indexPath.row]]?.produttore
+////        detailsVC?.timeLbl.text = "\(films[currentUser.films[indexPath.row]]?.durata ?? 0) minuti"
+////        detailsVC?.img.image = UIImage(named: currentUser.films[indexPath.row])
+//
+//        let backItem = UIBarButtonItem()
+//            backItem.title = "Something Else"
+//            navigationItem.backBarButtonItem = backItem
+//
+//        detailsVC?.navigationItem.backBarButtonItem = backItem
+//
+//
+//        detailsVC?.navigationItem.title = "prova"
+//        detailsVC?.navigationController?.title = "prova"
+//        detailsVC?.navigationController?.navigationItem.title = "back"
+//
+//
+//
+//
+//        detailsVC?.film = films[currentUser.films[indexPath.row]] ?? (Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: ""))
+//
+//
+//
+////        self.navigationController?.pushViewController(detailsVC ?? UIViewController(), animated: true)
+//
+//        self.present(detailsVC ?? UIViewController(), animated: true, completion: nil)
+//
+//
+//
+//    }
 
     
     
