@@ -51,16 +51,16 @@ class ViewController: UIViewController {
             } else {
                 
                 for i in users{
-                    if mail == i.mail && pw == i.pw {
-                            user = i
-                            return true
-                        } else {
-                            //not correct
-                            alert(title: "Utente non trovato", message: "Per favore, ricontrolla i dati inseriti")
-                            return false
-                            
-                        }
+                    if mail == i.mail{
+                            if pw == i.pw {
+                                user = i
+                                return true
+                            }
                     }
+                }
+                //not correct
+                alert(title: "Utente non trovato", message: "Per favore, ricontrolla i dati inseriti")
+                return false
                 }
             }
         
@@ -81,6 +81,9 @@ class ViewController: UIViewController {
             let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
             
             homeVC.currentUser = user
+            
+            mailTF.text = ""
+            pwTF.text = ""
             
             self.navigationController?.pushViewController(homeVC , animated: true)
             

@@ -53,12 +53,16 @@ class DetailsViewController: UIViewController {
         typeLbl.textColor = .white
         producerLbl.textColor = .white
         
+        if let time = films[selectedMovie]?.durata{
+            img.image = UIImage(named: selectedMovie)
+            titleLbl.text = films[selectedMovie]?.nome
+            timeLbl.text = " \(time) min"
+            typeLbl.text = getType()
+            producerLbl.text = films[selectedMovie]?.produttore
+        }
         
-        img.image = UIImage(named: selectedMovie)
-        titleLbl.text = films[selectedMovie]?.nome
-        timeLbl.text = "\(films[selectedMovie]?.durata) min"
-        typeLbl.text = getType()
-        producerLbl.text = films[selectedMovie]?.produttore
+        
+        
         
         
         

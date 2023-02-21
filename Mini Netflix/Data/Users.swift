@@ -8,7 +8,8 @@
 import Foundation
 
 var users : [User] = [
-    User(name: "Juan", mail: "123@gmail.com", pw: "123", films: ["Endgame", "Captain marvel", "Infinity war"])
+    User(name: "Juan", mail: "123@gmail.com", pw: "123", films: ["Endgame", "Captain marvel", "Infinity war"]),
+    User(name: "Pierino", mail: "123@yahoo.it", pw: "123", films: ["Cattivissimo2", "Garfield", "Winnie"])
 ]
 
 

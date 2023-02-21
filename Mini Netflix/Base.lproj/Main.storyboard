@@ -109,6 +109,16 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mPF-4y-tuX">
                                         <rect key="frame" x="0.0" y="61" width="393" height="698"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="xL2-45-K9J">
+                                            <rect key="frame" x="0.0" y="213.33333015441895" width="393" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" systemColor="systemRedColor"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="tinted" title="Log out"/>
+                                            <connections>
+                                                <action selector="logOut:" destination="gRs-j4-Hz7" eventType="touchUpInside" id="1EA-Qb-MRN"/>
+                                            </connections>
+                                        </button>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="film" rowHeight="140" id="76S-Zu-ImX" customClass="FilmTableViewCell" customModule="Mini_Netflix" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="55.333332061767578" width="353" height="140"/>
@@ -177,6 +187,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logOutBtn" destination="xL2-45-K9J" id="Eie-bx-2wO"/>
                         <outlet property="table" destination="mPF-4y-tuX" id="55B-hv-4Kc"/>
                         <outlet property="welcomeLbl" destination="e7M-Df-PjG" id="myj-KJ-HNW"/>
                     </connections>
@@ -193,29 +204,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvz-kI-oKB">
+                                <rect key="frame" x="10" y="393" width="373" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-bg-U7b">
-                                <rect key="frame" x="156" y="393" width="81.333333333333314" height="81.333333333333314"/>
+                                <rect key="frame" x="156" y="413.33333333333331" width="81.333333333333314" height="61"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvz-kI-oKB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-u1-M5n">
                                         <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-u1-M5n">
-                                        <rect key="frame" x="0.0" y="20.333333333333314" width="81.333333333333329" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tET-fq-IBI">
-                                        <rect key="frame" x="0.0" y="40.666666666666686" width="81.333333333333329" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="20.333333333333371" width="81.333333333333329" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produttore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdB-Ka-5Sd">
-                                        <rect key="frame" x="0.0" y="61.000000000000007" width="81.333333333333329" height="20.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="40.666666666666686" width="81.333333333333329" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -258,13 +269,16 @@
                         <viewLayoutGuide key="safeArea" id="Pc0-py-75F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0gg-bg-U7b" firstAttribute="top" secondItem="bcy-tp-QlS" secondAttribute="bottom" constant="40" id="3Js-3x-Qoi"/>
+                            <constraint firstItem="Pc0-py-75F" firstAttribute="trailing" secondItem="Jvz-kI-oKB" secondAttribute="trailing" constant="10" id="0Gy-vj-ikw"/>
+                            <constraint firstItem="0gg-bg-U7b" firstAttribute="top" secondItem="Jvz-kI-oKB" secondAttribute="bottom" id="3Js-3x-Qoi"/>
                             <constraint firstItem="8xo-gI-u4g" firstAttribute="centerX" secondItem="F0v-qM-x6T" secondAttribute="centerX" id="8Fa-Io-sbp"/>
                             <constraint firstItem="ut0-uB-JEF" firstAttribute="trailing" secondItem="Pc0-py-75F" secondAttribute="trailing" id="FnK-nP-md5"/>
                             <constraint firstItem="0gg-bg-U7b" firstAttribute="centerX" secondItem="F0v-qM-x6T" secondAttribute="centerX" id="LKd-CS-aNn"/>
                             <constraint firstItem="8xo-gI-u4g" firstAttribute="top" secondItem="0gg-bg-U7b" secondAttribute="bottom" constant="50" id="ROA-ur-XP0"/>
                             <constraint firstItem="ut0-uB-JEF" firstAttribute="leading" secondItem="Pc0-py-75F" secondAttribute="leading" id="Vac-8o-UGs"/>
                             <constraint firstItem="bcy-tp-QlS" firstAttribute="top" secondItem="ut0-uB-JEF" secondAttribute="bottom" constant="50" id="das-p0-5FM"/>
+                            <constraint firstItem="Jvz-kI-oKB" firstAttribute="leading" secondItem="Pc0-py-75F" secondAttribute="leading" constant="10" id="tZl-NM-JBQ"/>
+                            <constraint firstItem="Jvz-kI-oKB" firstAttribute="top" secondItem="bcy-tp-QlS" secondAttribute="bottom" constant="40" id="vVS-DT-dGL"/>
                             <constraint firstItem="ut0-uB-JEF" firstAttribute="top" secondItem="Pc0-py-75F" secondAttribute="top" id="vZb-H4-FzB"/>
                             <constraint firstItem="bcy-tp-QlS" firstAttribute="centerX" secondItem="F0v-qM-x6T" secondAttribute="centerX" id="zOE-rK-RIk"/>
                         </constraints>

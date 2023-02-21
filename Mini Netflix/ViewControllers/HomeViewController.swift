@@ -19,6 +19,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var table: UITableView!
     
+    @IBOutlet weak var logOutBtn: UIButton!
+    
+    
     
 
     override func viewDidLoad() {
@@ -140,6 +143,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func logOut(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     
     
