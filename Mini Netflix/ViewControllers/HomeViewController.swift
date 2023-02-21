@@ -79,7 +79,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailsVC") as? DetailsViewController
             
-            detailsVC?.film = films[currentUser.films[indexPath.row]] ?? (Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: ""))
+//            detailsVC?.film = films[currentUser.films[indexPath.row]] ?? (Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: ""))
             
         detailsVC?.selectedMovie = currentUser.films[indexPath.row]
             

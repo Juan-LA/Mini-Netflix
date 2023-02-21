@@ -35,7 +35,7 @@ class DetailsViewController: UIViewController {
 //    @IBOutlet weak var navBtn: UINavigationItem!
     @IBOutlet weak var backBtn: UIBarButtonItem!
     
-    var film : Film = Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: "")
+//    var film : Film = Film(nome: "", anno: 0, durata: 0, categorie: [], produttore: "")
     
     
     
@@ -55,10 +55,10 @@ class DetailsViewController: UIViewController {
         
         
         img.image = UIImage(named: selectedMovie)
-        titleLbl.text = film.nome
-        timeLbl.text = "\(film.durata) min"
+        titleLbl.text = films[selectedMovie]?.nome
+        timeLbl.text = "\(films[selectedMovie]?.durata) min"
         typeLbl.text = getType()
-        producerLbl.text = film.produttore
+        producerLbl.text = films[selectedMovie]?.produttore
         
         
         
@@ -79,7 +79,7 @@ class DetailsViewController: UIViewController {
     
     func getType() -> String?{
         var string = String()
-        if let s = films[film.nome]?.categorie{
+        if let s = films[selectedMovie]?.categorie{
             for i in s {
                 string += i
                 if i != s[s.count-1]{
